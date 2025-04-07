@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* FontAwesome (temporary, we should use the icons directly instead) */
+@import url('https://a.thered.sh/assets/fa/css/all.min.css');
+
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 25em;
+    max-height: 15em;
+    border-radius: 5px;
+}
+
+body {
+    font-family: "Roboto";
+    font-weight: 300;
+    background-color: #111218;
+    /* Discord dark background */
+    color: #dcddde;
+    /* Discord light text color */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.messagepad {
+    margin-bottom:2px;
+}
+
+.container {
+    background-color: #2f3136;
+    /* Slightly lighter dark background for container */
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    /* To clip rounded corners */
+}
+
+.chat-container {
+    
+    /*width: 80%;  Adjust as needed */
+    /*max-width: 800px;
+    height: 90vh;  Adjust as needed */
+    
+}
+
+.parentusername {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    /*grid-template-rows: repeat(4, 1fr);*/
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+}
+
+.div1username {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.div2username {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.message-list {
+    flex-grow: 1;
+    /* Take up available space */
+    padding: 20px;
+    overflow-y: auto;
+    /* Enable vertical scrolling if messages exceed height */
+    display: flex;
+    flex-direction: column;
+    /* Messages stack vertically */
+}
+
+.message {
+    /*margin-bottom: 10px;*/
+    padding: 8px 12px;
+    height: fit-content;
+    display: block;
+    flex-shrink: 0;
+    max-height: 300px;
+    overflow-y: auto;
+    background-color: #36393f;
+    /* Message background slightly darker */
+    border-radius: 4px;
+    word-wrap: break-word;
+    /* Break long words */
+}
+
+.msg-seperate {
+    height: 3px;
+    flex-shrink: 0;
+}
+
+.message .username {
+    font-weight: bold;
+    margin-right: 8px;
+    color: #bdc1f4;
+    /* Lighter username color */
+}
+
+.input-area {
+    padding: 15px 20px;
+    background-color: #292b2f;
+    /* Input area background even darker */
+    display: flex;
+    align-items: center;
+    /* Vertically center input and button */
+    border-top: 1px solid #202225;
+    /* Separator line */
+}
+
+input {
+    flex-grow: 1;
+    /* Input takes up most space */
+    padding: 10px 12px;
+    border-radius: 4px;
+    border: none;
+    background-color: #40444b;
+    /* Input background */
+    color: #dcddde;
+}
+.specialMessage {
+    background-color:#525b7a
+}
+input:focus {
+    outline: none;
+    /* Remove default focus outline */
+    box-shadow: 0 0 0 2px rgba(114, 137, 218, 0.5);
+    /* Discord-like focus effect */
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #7289da;
+    /* Discord blurple button */
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+    /* Smooth hover effect */
+}
+
+.source {
+    background-color: #202225;
+    width: 95%;
+    align-self: center;
+    max-height: 150px;
+    display: block;
+    border-radius: 5px;
+    padding: 5px;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    max-height: 0px;
+    display: none;
+    transition: .2s ease-out;
+    
+}
+
+.showSource {
+    width: fit-content;
+    float: right;
+    color: #ffffff51;
+    position: relative;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0);
+    height: 1em;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: .5em
+}
+
+.showSource:hover {
+    background-color: rgba(0, 0, 0, 0);
+    color: #809bff;
+}
+
+.file-upload {
+    padding: 10px 15px;
+    border: none;
+    height: 16px;
+    border-radius: 4px;
+    background-color: #7289da;
+    /* Discord blurple button */
+    background-image: url('upload.svg');
+    background-size: contain;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: sans-serif;
+    transition: background-color 0.2s ease;
+    /* Smooth hover effect */
+}
+
+.file-upload:hover {
+    background-color: #677bc4;
+    /* Slightly darker on hover */
+}
+
+
+button:hover {
+    background-color: #677bc4;
+    /* Slightly darker on hover */
+}
+
+button:focus {
+    outline: none;
+    /* Remove default focus outline */
+}
+
+.current-server i {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.current-server div {
+    display: inline-block;
+}
+
+#userstring {
+    color: rgba(255, 255, 255, 0.418);
+    position: absolute;
+    transform: translateY(-15px)translateX(-10px)
+}

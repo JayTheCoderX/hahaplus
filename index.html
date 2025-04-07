@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Chat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="parent">
+        <div class="current-server">
+            <div id="current-server-sec-status"></div>
+            <p>
+                <div>Currently connected to:</div>
+                <div id="current-server">...</div>
+            </p>
+        </div>
+        <div class="div1">
+            <div class="container chat-container">
+                <div id="message-list" class="message-list"
+                    style="min-height:450px; max-height:450px; overflow-y: auto;">
+                    <!-- Messages will be added here by JavaScript -->
+                </div>
+                <div class="input-area">
+                    <input type="text" id="message-input" placeholder="Message #general">&nbsp;
+                    <button id="send-button">Send</button>&nbsp;<label class="file-upload">
+                        <input type="file" id="filebox" style="width:0px; height:0px; padding:0px; margin:0px;" />
+                        &nbsp;
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="div2" style="height:100%">
+            <div class="container"
+                style="align-items:center;padding:10px;display:flex; flex-wrap: wrap; gap:10px;flex-direction: row;">
+                <input type="text" id="username" placeholder="Username" style="flex-grow:10;min-width:0;">
+                <button id="set" , style="white-space:nowrap; flex-shrink:0;flex-grow:1">Change</button>
+            </div>
+        </div>
+        <div class="div3">
+            <div class="container chat-container message-list">
+                <span id="userstring"></span>
+                <div class="msg-seperate"></div>
+                <div class="msg-seperate"></div>
+                <div class="msg-seperate"></div>
+                <div id="userlist">
+                    <div class="message messagepad">
+                        <span class="username">
+                            <span style="color: #707070!important;">Connecting...</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="div4">
+                <div class="container"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="purify.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

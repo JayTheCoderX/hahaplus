@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* FontAwesome (temporary, we should use the icons directly instead) */
+@import url('https://a.thered.sh/assets/fa/css/all.min.css');
+
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto";
+    font-weight: 300;
+    background-color: #222329;
+    color: white;
+}
+
+/* App icon */
+.app-icon {
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    padding: 4px;
+    font-size: 10px;
+}
+
+.app-icon .plus {
+    position: relative;
+    display: block;
+    font-size: 32px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.app-icon::before {
+    content: "v2";
+    position: absolute;
+    display: block;
+}
