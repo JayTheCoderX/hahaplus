@@ -1,0 +1,2 @@
+# hahaplus
+Upgraded hahachat client
